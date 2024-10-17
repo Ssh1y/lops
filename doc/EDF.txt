@@ -1,0 +1,291 @@
+cbmc VerifyCase1.c ../kernel/base/sched/los_sched.c ../kernel/base/sched/los_priority.c ../kernel/base/sched/los_deadline.c ../kernel/base/core/los_task.c ../kernel/base/sched/los_sortlink.c -I ../kernel/base/include -I ../kernel/include -I ../kernel/common -I ../arch/arm/arm/include/ -DUSECBMC -D "OS_SYS_CLOCK = 100000" --no-built-in-assertions --unwind 13 
+CBMC version 5.95.1 (cbmc-5.95.1) 64-bit x86_64 linux
+Parsing VerifyCase1.c
+Parsing ../kernel/base/sched/los_sched.c
+Parsing ../kernel/base/sched/los_priority.c
+Parsing ../kernel/base/sched/los_deadline.c
+Parsing ../kernel/base/core/los_task.c
+Parsing ../kernel/base/sched/los_sortlink.c
+Converting
+Type-checking VerifyCase1
+Type-checking los_deadline
+Type-checking los_priority
+Type-checking los_sched
+Type-checking los_sortlink
+Type-checking los_task
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+file ../kernel/base/core/los_task.c line 254 function LOS_TaskCreate: replacing function pointer by 5 possible targets
+file ../kernel/base/sched/los_sched.c line 263 function LOS_Schedule: replacing function pointer by 2 possible targets
+file ../kernel/base/sched/los_sched.c line 266 function LOS_Schedule: replacing function pointer by 5 possible targets
+Generic Property Instrumentation
+Running with 8 object bits, 56 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop OsSchedRunqueueInit.0 iteration 1 file ../kernel/base/sched/los_sched.c line 54 function OsSchedRunqueueInit thread 0
+Unwinding loop OsTaskInit.0 iteration 1 file ../kernel/base/core/los_task.c line 39 function OsTaskInit thread 0
+Unwinding loop OsTaskInit.0 iteration 2 file ../kernel/base/core/los_task.c line 39 function OsTaskInit thread 0
+Unwinding loop OsTaskInit.0 iteration 3 file ../kernel/base/core/los_task.c line 39 function OsTaskInit thread 0
+Unwinding loop OsTaskInit.0 iteration 4 file ../kernel/base/core/los_task.c line 39 function OsTaskInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 1 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 2 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 3 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 4 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 5 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 6 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 7 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 8 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 9 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 10 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 11 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 1 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 2 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 3 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 4 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 5 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 6 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 7 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 8 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 9 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 10 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 11 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.0 iteration 12 file ../kernel/base/sched/los_priority.c line 294 function HPFSchedPolicyInit thread 0
+Unwinding loop HPFSchedPolicyInit.1 iteration 12 file ../kernel/base/sched/los_priority.c line 291 function HPFSchedPolicyInit thread 0
+Unwinding loop OsSchedInit.0 iteration 1 file ../kernel/base/sched/los_sched.c line 69 function OsSchedInit thread 0
+Unwinding loop EDFEnqueue.0 iteration 1 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 2 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 3 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 4 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 1 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 2 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 3 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop EDFEnqueue.0 iteration 4 file ../kernel/base/sched/los_deadline.c line 145 function EDFEnqueue thread 0
+Unwinding loop AddNode2SortLink.0 iteration 1 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 2 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 3 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 4 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 5 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 6 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 7 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 8 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 9 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 10 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 11 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop AddNode2SortLink.0 iteration 12 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Not unwinding loop AddNode2SortLink.0 iteration 13 file ../kernel/base/sched/los_sortlink.c line 72 function AddNode2SortLink thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 1 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 2 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 3 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 4 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 5 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 6 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 7 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 8 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 9 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 10 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 11 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Unwinding loop DeadlineQueueInsert.0 iteration 12 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Not unwinding loop DeadlineQueueInsert.0 iteration 13 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
+Runtime Symex: 2.09142s
+size of program expression: 26206 steps
+simple slicing removed 170 assignments
+Generated 25 VCC(s), 3 remaining after simplification
+Runtime Postprocess Equation: 0.00510863s
+Passing problem to propositional reduction
+converting SSA
+Runtime Convert SSA: 2.1074s
+Running propositional reduction
+Post-processing
+Runtime Post-process: 4.48125s
+Solving with MiniSAT 2.2.1 with simplifier
+6288046 variables, 30287844 clauses
+SAT checker: instance is SATISFIABLE
+Runtime Solver: 64.9306s
+Runtime decision procedure: 67.0406s
+Running propositional reduction
+Solving with MiniSAT 2.2.1 with simplifier
+6288046 variables, 14654368 clauses
+SAT checker: instance is UNSATISFIABLE
+Runtime Solver: 13.2069s
+Runtime decision procedure: 13.2069s
+
+** Results:
+../kernel/base/core/los_task.c function LOS_TaskCreate
+[LOS_TaskCreate.assertion.1] line 213 VR5: 创建任务时，任务初始化参数不为空: SUCCESS
+[LOS_TaskCreate.assertion.2] line 231 VR1: 创建任务时，不处于中断状态: SUCCESS
+[LOS_TaskCreate.assertion.3] line 249 VR2: 创建任务后，任务控制块不为空: SUCCESS
+[LOS_TaskCreate.assertion.4] line 250 VR3: 创建任务后，任务控制块的操作函数不为空: SUCCESS
+[LOS_TaskCreate.assertion.5] line 251 VR4: 创建任务后，任务控制块的入队函数不为空: SUCCESS
+
+../kernel/base/include/los_sched_pri.h function HPFRunqueueTopTaskGet
+[HPFRunqueueTopTaskGet.assertion.1] line 650 VR8: 如果调度策略为优先级策略，那么下一个任务是调度队列里面具有最高优先级的任务: SUCCESS
+
+../kernel/base/sched/los_deadline.c function EDFEnqueue
+[EDFEnqueue.assertion.1] line 120 任务状态不为就绪态: SUCCESS
+[EDFEnqueue.assertion.2] line 152 任务的完成时间递增: SUCCESS
+
+../kernel/base/sched/los_deadline.c function EDFTimeSliceUpdate
+[EDFTimeSliceUpdate.assertion.1] line 50 当前时间大于任务开始时间: SUCCESS
+[EDFTimeSliceUpdate.assertion.2] line 61 任务的运行时间大于0: SUCCESS
+
+../kernel/base/sched/los_priority.c function HPFTimeSliceUpdate
+[HPFTimeSliceUpdate.assertion.1] line 61 当前时间大于任务开始时间: SUCCESS
+[HPFTimeSliceUpdate.assertion.2] line 67 任务的运行时间大于0: SUCCESS
+
+../kernel/base/sched/los_priority.c function PriQueHeadInsert
+[PriQueHeadInsert.assertion.1] line 126 调度队列已初始化: SUCCESS
+
+../kernel/base/sched/los_priority.c function PriQueInsert
+[PriQueInsert.assertion.1] line 187 任务状态不为就绪态: SUCCESS
+[PriQueInsert.assertion.2] line 219 调度策略合法: SUCCESS
+
+../kernel/base/sched/los_priority.c function PriQueTailInsert
+[PriQueTailInsert.assertion.1] line 153 调度队列已初始化: SUCCESS
+
+../kernel/base/sched/los_sched.c function LOS_Schedule
+[LOS_Schedule.assertion.1] line 232 VR7：调度前当前运行的任务不为空: SUCCESS
+[LOS_Schedule.assertion.2] line 253 VR6: 若调度队列不允许抢占，则放弃调度: SUCCESS
+
+../kernel/base/sched/los_sched.c function OsSchedResched
+[OsSchedResched.assertion.1] line 199 调度队列的任务锁计数为0: SUCCESS
+[OsSchedResched.assertion.2] line 209 VR9：如果调度策略为最早截止时间优先调度策略，那么下一个任务是调度队列中具有最早截止时间的任务: FAILURE
+[OsSchedResched.assertion.3] line 220 VR11：调度结束之后，被调度的任务的状态从Ready更改为Running: SUCCESS
+[OsSchedResched.assertion.4] line 221 VR12: 调度结束之后，调度前的当前运行任务去除Running状态: SUCCESS
+
+../kernel/base/sched/los_sched.c function TopTaskGet
+[TopTaskGet.assertion.1] line 120 VR10：若调度时没有任务准备好，那么下一个被调度的任务是调度队列中的空闲任务: SUCCESS
+
+** 1 of 23 failed (2 iterations)
+VERIFICATION FAILED

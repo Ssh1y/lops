@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "los_task_pri.h": "c",
+        "los_sched_pri.h": "c",
+        "los_sortlink_pri.h": "c",
+        "los_sys_pri.h": "c",
+        "los_hw_cpu.h": "c",
+        "los_typedef.h": "c",
+        "los_list.h": "c",
+        "los_builddef.h": "c",
+        "los_toolchain.h": "c"
+    }
+}
