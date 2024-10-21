@@ -16,7 +16,7 @@ Type-checking los_task
 Generating GOTO Program
 Adding CPROVER library (x86_64)
 Removal of function pointers and virtual functions
-file ../kernel/base/core/los_task.c line 254 function LOS_TaskCreate: replacing function pointer by 5 possible targets
+file ../kernel/base/core/los_task.c line 257 function LOS_TaskCreate: replacing function pointer by 5 possible targets
 file ../kernel/base/sched/los_sched.c line 263 function LOS_Schedule: replacing function pointer by 2 possible targets
 file ../kernel/base/sched/los_sched.c line 266 function LOS_Schedule: replacing function pointer by 5 possible targets
 Generic Property Instrumentation
@@ -218,36 +218,36 @@ Unwinding loop DeadlineQueueInsert.0 iteration 10 file ../kernel/base/sched/los_
 Unwinding loop DeadlineQueueInsert.0 iteration 11 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
 Unwinding loop DeadlineQueueInsert.0 iteration 12 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
 Not unwinding loop DeadlineQueueInsert.0 iteration 13 file ../kernel/base/sched/los_deadline.c line 112 function DeadlineQueueInsert thread 0
-Runtime Symex: 2.09142s
+Runtime Symex: 1.70141s
 size of program expression: 26206 steps
 simple slicing removed 170 assignments
 Generated 25 VCC(s), 3 remaining after simplification
-Runtime Postprocess Equation: 0.00510863s
+Runtime Postprocess Equation: 0.0125858s
 Passing problem to propositional reduction
 converting SSA
-Runtime Convert SSA: 2.1074s
+Runtime Convert SSA: 1.83278s
 Running propositional reduction
 Post-processing
-Runtime Post-process: 4.48125s
+Runtime Post-process: 4.73379s
 Solving with MiniSAT 2.2.1 with simplifier
 6288046 variables, 30287844 clauses
 SAT checker: instance is SATISFIABLE
-Runtime Solver: 64.9306s
-Runtime decision procedure: 67.0406s
+Runtime Solver: 59.4432s
+Runtime decision procedure: 61.2784s
 Running propositional reduction
 Solving with MiniSAT 2.2.1 with simplifier
 6288046 variables, 14654368 clauses
 SAT checker: instance is UNSATISFIABLE
-Runtime Solver: 13.2069s
-Runtime decision procedure: 13.2069s
+Runtime Solver: 12.1516s
+Runtime decision procedure: 12.1517s
 
 ** Results:
 ../kernel/base/core/los_task.c function LOS_TaskCreate
-[LOS_TaskCreate.assertion.1] line 213 VR5: 创建任务时，任务初始化参数不为空: SUCCESS
-[LOS_TaskCreate.assertion.2] line 231 VR1: 创建任务时，不处于中断状态: SUCCESS
-[LOS_TaskCreate.assertion.3] line 249 VR2: 创建任务后，任务控制块不为空: SUCCESS
-[LOS_TaskCreate.assertion.4] line 250 VR3: 创建任务后，任务控制块的操作函数不为空: SUCCESS
-[LOS_TaskCreate.assertion.5] line 251 VR4: 创建任务后，任务控制块的入队函数不为空: SUCCESS
+[LOS_TaskCreate.assertion.1] line 216 VR5: 创建任务时，任务初始化参数不为空: SUCCESS
+[LOS_TaskCreate.assertion.2] line 234 VR1: 创建任务时，不处于中断状态: SUCCESS
+[LOS_TaskCreate.assertion.3] line 252 VR2: 创建任务后，任务控制块不为空: SUCCESS
+[LOS_TaskCreate.assertion.4] line 253 VR3: 创建任务后，任务控制块的操作函数不为空: SUCCESS
+[LOS_TaskCreate.assertion.5] line 254 VR4: 创建任务后，任务控制块的入队函数不为空: SUCCESS
 
 ../kernel/base/include/los_sched_pri.h function HPFRunqueueTopTaskGet
 [HPFRunqueueTopTaskGet.assertion.1] line 650 VR8: 如果调度策略为优先级策略，那么下一个任务是调度队列里面具有最高优先级的任务: SUCCESS

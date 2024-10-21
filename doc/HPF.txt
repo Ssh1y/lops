@@ -16,7 +16,7 @@ Type-checking los_task
 Generating GOTO Program
 Adding CPROVER library (x86_64)
 Removal of function pointers and virtual functions
-file ../kernel/base/core/los_task.c line 254 function LOS_TaskCreate: replacing function pointer by 5 possible targets
+file ../kernel/base/core/los_task.c line 257 function LOS_TaskCreate: replacing function pointer by 5 possible targets
 file ../kernel/base/sched/los_sched.c line 263 function LOS_Schedule: replacing function pointer by 2 possible targets
 file ../kernel/base/sched/los_sched.c line 266 function LOS_Schedule: replacing function pointer by 5 possible targets
 Generic Property Instrumentation
@@ -197,30 +197,30 @@ Unwinding loop HPFRunqueueTopTaskGet.0 iteration 10 file ../kernel/base/include/
 Unwinding loop HPFRunqueueTopTaskGet.0 iteration 11 file ../kernel/base/include/los_sched_pri.h line 649 function HPFRunqueueTopTaskGet thread 0
 Unwinding loop HPFRunqueueTopTaskGet.0 iteration 12 file ../kernel/base/include/los_sched_pri.h line 649 function HPFRunqueueTopTaskGet thread 0
 Not unwinding loop HPFRunqueueTopTaskGet.0 iteration 13 file ../kernel/base/include/los_sched_pri.h line 649 function HPFRunqueueTopTaskGet thread 0
-Runtime Symex: 10.4122s
+Runtime Symex: 10.1369s
 size of program expression: 23723 steps
 simple slicing removed 623 assignments
 Generated 31 VCC(s), 16 remaining after simplification
-Runtime Postprocess Equation: 0.00289578s
+Runtime Postprocess Equation: 0.00267464s
 Passing problem to propositional reduction
 converting SSA
-Runtime Convert SSA: 5.28296s
+Runtime Convert SSA: 5.31217s
 Running propositional reduction
 Post-processing
-Runtime Post-process: 0.226444s
+Runtime Post-process: 0.22395s
 Solving with MiniSAT 2.2.1 with simplifier
 7606193 variables, 37085668 clauses
 SAT checker: instance is UNSATISFIABLE
-Runtime Solver: 197.286s
-Runtime decision procedure: 202.57s
+Runtime Solver: 186.202s
+Runtime decision procedure: 191.516s
 
 ** Results:
 ../kernel/base/core/los_task.c function LOS_TaskCreate
-[LOS_TaskCreate.assertion.1] line 213 VR5: 创建任务时，任务初始化参数不为空: SUCCESS
-[LOS_TaskCreate.assertion.2] line 231 VR1: 创建任务时，不处于中断状态: SUCCESS
-[LOS_TaskCreate.assertion.3] line 249 VR2: 创建任务后，任务控制块不为空: SUCCESS
-[LOS_TaskCreate.assertion.4] line 250 VR3: 创建任务后，任务控制块的操作函数不为空: SUCCESS
-[LOS_TaskCreate.assertion.5] line 251 VR4: 创建任务后，任务控制块的入队函数不为空: SUCCESS
+[LOS_TaskCreate.assertion.1] line 216 VR5: 创建任务时，任务初始化参数不为空: SUCCESS
+[LOS_TaskCreate.assertion.2] line 234 VR1: 创建任务时，不处于中断状态: SUCCESS
+[LOS_TaskCreate.assertion.3] line 252 VR2: 创建任务后，任务控制块不为空: SUCCESS
+[LOS_TaskCreate.assertion.4] line 253 VR3: 创建任务后，任务控制块的操作函数不为空: SUCCESS
+[LOS_TaskCreate.assertion.5] line 254 VR4: 创建任务后，任务控制块的入队函数不为空: SUCCESS
 
 ../kernel/base/include/los_sched_pri.h function HPFRunqueueTopTaskGet
 [HPFRunqueueTopTaskGet.assertion.1] line 650 VR8: 如果调度策略为优先级策略，那么下一个任务是调度队列里面具有最高优先级的任务: SUCCESS

@@ -254,7 +254,7 @@ LITE_OS_SEC_TEXT_INIT UINT32 LOS_TaskCreate(UINT32 *taskID, TSK_INIT_PARAM_S *in
     __CPROVER_assert(taskCB->ops->enqueue != NULL, "VR4: 创建任务后，任务控制块的入队函数不为空");
 #endif
     // SCHEDULER_LOCK(intSave);
-    taskCB->ops->enqueue(OsSchedRunqueue(), taskCB);
+    // taskCB->ops->enqueue(OsSchedRunqueue(), taskCB); // 不考虑入队列操作，会增加状态空间，这边在调度的用例内验证
     // SCHEDULER_UNLOCK(intSave);
 
     /* in case created task not running on this core,
