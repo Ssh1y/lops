@@ -164,6 +164,9 @@ LITE_OS_SEC_TEXT_INIT UINT32 LOS_TaskCreateOnly(UINT32 *taskID, TSK_INIT_PARAM_S
         return errRet;
     }
 
+#ifdef errRet
+    __CPROVER_assert(errRet == LOS_OK, "VR13: 创建任务时，任务初始化参数检查无误");
+#endif
     LosTaskCB *taskCB = GetFreeTaskCB();
     if (taskCB == NULL) {
         return LOS_ERRNO_TSK_TCB_UNAVAILABLE;
